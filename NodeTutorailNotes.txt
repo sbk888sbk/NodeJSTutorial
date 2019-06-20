@@ -18,3 +18,169 @@ Node REPL?
 --> Node js runs on a server but not limited to only server
 --> Used to do utilities
 --> We write js code to run on server but we also write server code. 
+
+
+//javascript
+Primitive vs Reference data types :
+
+//var vs let vs const
+var     : function scoped    : When a variable is accessed before declaring with var keyword, it is initalized with "undefined" as default value
+let     : block scoped       : When a variable is accessed before declaring with let keyword, it throws reference error and will not get initalized
+const   : const is almost exactly the same as let.The only difference is, once you’ve assigned a value to a variable using const, you can’t reassign it to a new value.
+
+function dummy(){
+    var firstName = 'Sai Bala Krishna';
+    const lastName  = 'Allamsetty';
+    
+    console.log("firstName is :"+ firstName);
+    console.log("lastName is :"+ lastName);
+
+//    firstName = 'Sai'
+//    lastName = 'Bala'
+
+    console.log("firstName is :"+ firstName);
+    console.log("lastName is :"+ lastName);
+
+
+
+    for (var age1 = 0; age1< 23; age1++ ){
+        continue;
+    }
+    for (let age2 = 0; age2< 23; age2++ ){
+        continue;
+    }
+
+    console.log("age 1: "+ age1);
+        
+    console.log("age 2: "+ age2);
+}
+
+dummy()
+
+
+--> functions can also be declared using the symbol "=>"
+--> These functions are called "Anonymous Funtions" since they don't have names
+
+Example : 
+const myfunction1 = () =>{
+    console.log("Inside my function without any parameters");
+}; 
+
+const myfunction2 = (a, b) =>{
+    console.log("Inside my function with any parameters: a = "+a+" b = "+b);
+}; 
+
+myfunction1();
+myfunction2(1,2);
+
+
+//Copying 
+for arrays : 
+//1.
+newArray = oldArray.slice()
+
+//2. Spread operator
+newArray = [...oldArray]
+
+//3. Rest operator
+const toArray = (...args) => {
+    return args;
+}
+console.log(toArray(1, 2, 3));
+
+//Object destructuring
+
+const person ={
+    name : 'Max',
+    age : 29,
+    greet(){
+        console.log('Hi I am ' + this.name);
+    }
+};
+
+const printName = ({name}) => {
+    console.log(name);
+};
+
+printName(person);
+
+
+const {name, age} = person;
+console.log(name, age);
+
+const hobbies = ['Sports', 'Cooking'];
+const [hobby1, hobby2] = hobbies;
+console.log(hobby1, hobby2);
+
+
+//Asynchronous code
+setTimeout(() => {
+    alert('Timer is done!');
+}, 2000)
+
+
+//Synchronous code
+console.log('Hello');
+console.log('Hi');
+
+
+//Promises
+
+
+
+//Template Literals
+--> It's a different way of writing strings.
+--> Instead of using double or single quotation marks: 'A String' or "Another string", you can use backticks (`)
+
+--> `Another way of writing strings`
+
+#Now why would we use that way of creating strings?
+
+--> With that syntax, you can dynamically add data into a string like this:
+Example : Notice the $variables in the code 
+const name = "Max";
+const age = 29;
+console.log(`My name is ${name} and I am ${age} years old.`);
+
+
+--> This is of course shorter and easier to read than the "old" way of concatenating strings:
+const name = "Max";
+const age = 29;
+console.log("My name is " + name + " and I am " + age + " years old.")
+
+
+//***** NODEJS*****
+
+//How the web works
+--> Client - Request to -> URL -> DNS -> Looks up IP of server -> Sends request to server -> 
+--> Server processes the request and sends a response 
+
+//How the NODEJS works
+--> Client - Request to Node -> Sends request to node server
+--> Same for the node as well
+
+
+--> We use protocals HTTP, HTTPS
+--> These protocals are used to transfer data which is understood by Browser and Server
+--> The only difference is HTTPS encrypts the data that it is transferring
+
+
+//More on node core modules
+
+1. http : Launch a server and send requests
+2. https : Launch a SSL server
+3. fs : 
+4. path :
+5. os :
+
+//Creating a server
+--> see app.js code
+--> To exit a server from code we write the code : process.exit() - not recommended as we donot 
+stop the server after a single request
+
+--> To exit from the running server while developing a code, we use the cmd : 
+CTRL + C in the terminal / command prompt where the server is running
+
+
+
+//Node js event loop
