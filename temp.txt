@@ -21,3 +21,39 @@ console.log(name, age);
 const hobbies = ['Sports', 'Cooking'];
 const [hobby1, hobby2] = hobbies;
 console.log(hobby1, hobby2);
+
+
+//Asynchronous code
+setTimeout(() => {
+    alert('Timer is done!');
+}, 2000)
+
+
+//Synchronous code
+console.log('Hello');
+console.log('Hi');
+
+
+//Promises
+
+
+
+//Template Literals
+--> It's a different way of writing strings.
+--> Instead of using double or single quotation marks: 'A String' or "Another string", you can use backticks (`)
+
+--> `Another way of writing strings`
+
+#Now why would we use that way of creating strings?
+
+--> With that syntax, you can dynamically add data into a string like this:
+Example : Notice the $variables in the code 
+const name = "Max";
+const age = 29;
+console.log(`My name is ${name} and I am ${age} years old.`);
+
+
+--> This is of course shorter and easier to read than the "old" way of concatenating strings:
+const name = "Max";
+const age = 29;
+console.log("My name is " + name + " and I am " + age + " years old.")
