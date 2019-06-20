@@ -13,3 +13,8 @@ Node REPL?
 --> Directly execute code in command line and parse it in instantly
 --> Example : 2 + 2
 
+
+
+--> Node js runs on a server but not limited to only server
+--> Used to do utilities
+--> We write js code to run on server but we also write server code. 
