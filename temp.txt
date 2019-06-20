@@ -82,3 +82,15 @@ console.log("My name is " + name + " and I am " + age + " years old.")
 3. fs : 
 4. path :
 5. os :
+
+//Creating a server
+--> see app.js code
+--> To exit a server from code we write the code : process.exit() - not recommended as we donot 
+stop the server after a single request
+
+--> To exit from the running server while developing a code, we use the cmd : 
+CTRL + C in the terminal / command prompt where the server is running
+
+
+
+//Node js event loop
