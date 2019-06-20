@@ -57,3 +57,28 @@ console.log(`My name is ${name} and I am ${age} years old.`);
 const name = "Max";
 const age = 29;
 console.log("My name is " + name + " and I am " + age + " years old.")
+
+
+//***** NODEJS*****
+
+//How the web works
+--> Client - Request to -> URL -> DNS -> Looks up IP of server -> Sends request to server -> 
+--> Server processes the request and sends a response 
+
+//How the NODEJS works
+--> Client - Request to Node -> Sends request to node server
+--> Same for the node as well
+
+
+--> We use protocals HTTP, HTTPS
+--> These protocals are used to transfer data which is understood by Browser and Server
+--> The only difference is HTTPS encrypts the data that it is transferring
+
+
+//More on node core modules
+
+1. http : Launch a server and send requests
+2. https : Launch a SSL server
+3. fs : 
+4. path :
+5. os :
