@@ -5,6 +5,7 @@
 
 //importing http lib
 const http = require('http');
+const fs = require('fs');
 
 //for importing a local module we need to give ./ before the file name
 //for core modules it can be ignored
@@ -13,21 +14,31 @@ const http = require('http');
 
 function reqListener(req, res){
     console.log(req);
+    const url = req.url ;
+    const method = req.method;
+    if(url =='/'){
+        res.setHeader('Content-type','text/html');
+        res.write('<html>');
+        res.write('<head><title>Enter Message</title></head>');
+        res.write('<body><form action = "/message" method ="POST"><input type="text" name="message"><button type="submit"> Send </button></form></body>');
+        return res.write('</html');
+    }
+    if(url ==='/message' && method === 'POST'){
+        fs.writeFileSync('message.txt','DUMMUY');
+        res.setstatusCode = 302;
+        res.setHeader = ('Location','/');
+        return res.end();
+
+    }
+    res.setHeader('Content-type','text/html');
+    res.write('<html>');
+    res.write('<head><title>My Page/title></head>');
+    res.write('<body><h1> Hello from my Node.js server</h1></body>');
+    res.write('</html');
+    res.end();
 }
 //creating a server method 1
 const server = http.createServer(reqListener);
 
 
-//creating a server method 2
-const server1 = http.createServer(function(req, res){
-    console.log(req);
-});
-
-//creating a server method 3
-const server2 = http.createServer((req, res) => {
-    console.log(req);    
-});
-
 server.listen(3000);
-//server1.listen(3000);
-//server2.listen(3000);

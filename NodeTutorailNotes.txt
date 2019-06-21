@@ -186,4 +186,14 @@ CTRL + C in the terminal / command prompt where the server is running
 //Node js event loop
 
 
-//
+//Sending response
+res.setHeader('Content-Type','text/html');
+rs.write();
+res.end();
+
+
+
+//Routing
+res.setHeader()
+res.write()
+res.end()
