@@ -23,8 +23,19 @@ function reqListener(req, res){
         res.write('</html>');
         return res.end();
     }
+    
     if(url ==='/message' && method === 'POST'){
-        fs.writeFileSync('message.txt','DUMMUY');
+        const body = [];
+        //on is an even listerner and it takes two arguments 
+        req.on('data', (chunk) => {
+            console.log(chunk);
+            body.push(chunk);
+        });
+        req.on('end', () => {
+            const parsedBody = Buffer.concat(body).toString();
+            const message = parsedBody.split('=')[1];
+            fs.writeFileSync('message.txt',message);
+        });
         res.statusCode = 302;
         res.setHeader('Location','/');
         return res.end();
