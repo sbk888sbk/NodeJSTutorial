@@ -10,9 +10,7 @@ const routes = require('./routes');
 //for importing a local module we need to give ./ before the file name
 //for core modules it can be ignored
 
-
-
-//creating a server method 1
+//creating a server method 
 const server = http.createServer(routes.handler);
 
 

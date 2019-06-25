@@ -1,0 +1,24 @@
+{
+  "name": "nodejstutorial",
+  "version": "1.0.0",
+  "description": "Complete NodeJs Tutorial",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbk888sbk/NodeJSTutorial.git"
+  },
+  "author": "Sai Bala Krishna Allamsetty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sbk888sbk/NodeJSTutorial/issues"
+  },
+  "homepage": "https://github.com/sbk888sbk/NodeJSTutorial#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

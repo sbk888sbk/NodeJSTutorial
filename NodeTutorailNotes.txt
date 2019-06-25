@@ -197,3 +197,31 @@ res.end();
 res.setHeader()
 res.write()
 res.end()
+
+
+
+
+// Imporved Workflow and Debugging
+--> We can initialize a project by running a command > npm init 
+--> It will ask for some inputs, at the end it will generate a package.json file with all the info
+--> Unknow fields can be left and npm will take default values
+
+//NPM Scripts:
+--> Inside package.json we see a keyword "Scripts" 
+--> This can be used to define custom commands
+--> "start" is an predefned keyword and can be used to start the project
+Ex : Defining start as 
+"start" : "node app.js"
+In terminal we type the command : npm start
+This will inturn run the command defined for it which is "node app.js"
+
+We can also declare custom keywords in script, but, for running the syntax is :
+> npm run <script-name>
+
+--> Without the "run" keyword, custom commands will not be executed
+
+
+//Errors and types
+--> Syntax Errors   :   Forgetting }
+--> Runtime Errors  :   setting response after sending response
+--> Logical Errors  :   
