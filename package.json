@@ -20,5 +20,8 @@
   "homepage": "https://github.com/sbk888sbk/NodeJSTutorial#readme",
   "devDependencies": {
     "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "node": "^12.4.0"
   }
 }
