@@ -1,17 +1,17 @@
-//There are libraries already implemented, we just need to impor the libs in our code
-//libs include 'http', 'https', 'fs', 'path', 'os'
-//To import we use 'require()'
+const express  = require('express');
+
+const app = express();
 
 
-//importing http lib
-const http = require('http');
-const routes = require('./routes');
+app.use('/add-product', (req, res, next) => {
+    console.log('Another Middleware');
+    res.send('<h1>Hello from lol</h1>');
+});
 
-//for importing a local module we need to give ./ before the file name
-//for core modules it can be ignored
+app.use('/', (req, res, next) => {
+    console.log('Another Middleware');
+    res.send('<h1>Hello from express</h1>');
+});
 
-//creating a server method 
-const server = http.createServer(routes.handler);
 
-
-server.listen(3000);
+app.listen(3000);
