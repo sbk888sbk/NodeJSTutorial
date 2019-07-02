@@ -28,6 +28,9 @@ var     : function scoped    : When a variable is accessed before declaring with
 let     : block scoped       : When a variable is accessed before declaring with let keyword, it throws reference error and will not get initalized
 const   : const is almost exactly the same as let.The only difference is, once you’ve assigned a value to a variable using const, you can’t reassign it to a new value.
 
+--> Hoisting : All the variables declared(not initizlizations) in the current scope are moved to the top of the scope and assigned as undefined.
+--> There is no support for "let" and "const" for hoisting
+
 function dummy(){
     var firstName = 'Sai Bala Krishna';
     const lastName  = 'Allamsetty';
