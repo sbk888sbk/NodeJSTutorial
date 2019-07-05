@@ -234,3 +234,26 @@ We can also declare custom keywords in script, but, for running the syntax is :
 // Debugging
 
 // Express.js
+-> app.use(<path>, <callBack>)
+-> app.get(<path>, <callBack>)
+-> app.post(<path>, <callBack>)
+-> app.listen(<PORT>)
+
+bodyParser : <Package>
+-> Used to parse the incoming body request - can only parse html Content
+-> For other content we can use different parsers
+app.use(bodyParser.urlencoded({extended : false}));
+
+Routing with Express :
+-> 
+const router = express.Router()
+router.get('<path>',<callBack>)
+
+-> In every route file we have to import express.Router()
+-> In every route file we have to write module.exports = <router variable>
+
+
+Path package :
+-> This is used to send absolute paths to our fields because if we write absolute path
+directly it will not take that path
+
