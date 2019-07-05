@@ -26,13 +26,14 @@ function reqListener(req, res){
     if(url ==='/message' && method === 'POST'){
         fs.writeFileSync('message.txt','DUMMUY');
         res.statusCode = 302;
+        console.log("Succesffullyy registered you are now being redirected");
         res.setHeader('Location','/');
         return res.end();
 
     }
     res.setHeader('Content-type','text/html');
     res.write('<html>');
-    res.write('<head><title>My Page/title></head>');
+    res.write('<head><title>My Page</title></head>');
     res.write('<body><h1> Hello from my Node.js server</h1></body>');
     res.write('</html');
     res.end();

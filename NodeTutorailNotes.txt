@@ -2,14 +2,14 @@ What is Node.js?
 --> It is a javascript runtime
 --> It allows us to run javascript in any environment outside web browser (example : on a server)
 --> Uses V8 engine to run javascript
---> Takes js code and compiles it to machine code (which is done by browser)
+--> Takes js code and compiles it to machine code (which is also done by browser)
 --> Machine code is run by a computer
 --> Apart from V8 features which is written in C++ and adds additional features like file system operation (cannot be done inside browser)
 --> Unlike browser, since we are running js code directly we do not have DOM objects
 
 
 
-Node REPL? 
+Node REPL (Read–Eval–Print Loop)? 
 --> Directly execute code in command line and parse it in instantly
 --> Example : 2 + 2
 
@@ -100,12 +100,14 @@ const person ={
         console.log('Hi I am ' + this.name);
     }
 };
+person.greet()
 
 const printName = ({name}) => {
     console.log(name);
 };
 
 printName(person);
+
 
 
 const {name, age} = person;
