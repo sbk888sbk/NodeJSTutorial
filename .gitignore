@@ -1,4 +1,4 @@
 /node_modules
 package-lock.json
 package.js
-assignment\Assignment_3\node_modules
+/assignment/Assignment_3/node_modules
