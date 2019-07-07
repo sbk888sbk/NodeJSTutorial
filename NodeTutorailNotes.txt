@@ -257,3 +257,7 @@ Path package :
 -> This is used to send absolute paths to our fields because if we write absolute path
 directly it will not take that path
 
+-> For serving content statically like css
+app.use(express.static(path.join(__dirname,'public')));
+
+
