@@ -9,6 +9,8 @@ const shopRoutes = require('./routes/shop');
 
 app.use(bodyParser.urlencoded({extended : false}));
 
+//For serving content statically like css
+app.use(express.static(path.join(__dirname,'public')));
 //Common Path for the different methods in the admin module
 app.use('/admin',adminRoutes);
 app.use('/',shopRoutes);
