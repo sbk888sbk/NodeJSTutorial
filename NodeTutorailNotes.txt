@@ -260,4 +260,6 @@ directly it will not take that path
 -> For serving content statically like css
 app.use(express.static(path.join(__dirname,'public')));
 
+Templating Engines :
+-> To create dynamic HTML content
 
