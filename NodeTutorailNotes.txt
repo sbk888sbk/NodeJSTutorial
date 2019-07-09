@@ -263,3 +263,15 @@ app.use(express.static(path.join(__dirname,'public')));
 Templating Engines :
 -> To create dynamic HTML content
 
+1. PUG 
+-> Will create new files with extension PUG
+-> Syntax is similar to html
+-> Indentation is important
+
+2. Hnadlebars
+-> Will create new files with the extension name that we specify in the app.js
+-> HTMl + some custom syntax
+-> Indentation same as html
+-> {layout:false} this has to be sent in render method to tell that we currently don't have a layout of that page
+-> Then it will search for handlabars files
+-> {{varName}}
