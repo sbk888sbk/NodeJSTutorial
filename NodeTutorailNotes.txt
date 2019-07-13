@@ -275,3 +275,10 @@ Templating Engines :
 -> {layout:false} this has to be sent in render method to tell that we currently don't have a layout of that page
 -> Then it will search for handlabars files
 -> {{varName}}
+-> If we have used any layout files by default handlebars engine will look for layouts with extension handlebars so,
+     if we have defined our layout as 'hbs' then we need to specify extension name explicity as  extname:'hbs' while declaring engine in app.js
+     - Check code for reference
+
+3. EJS
+-> EJS is similar to pug in the way that comparision is done alongside html code
+-> It does not support layout model
