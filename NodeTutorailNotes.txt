@@ -260,8 +260,22 @@ directly it will not take that path
 -> For serving content statically like css
 app.use(express.static(path.join(__dirname,'public')));
 
+
 Templating Engines :
 -> To create dynamic HTML content
+-> We have to install them separately
+
+-> We use res.render() method provided by express
+-> This method will look for registered view engine that is declared in the app.js
+-> We regiter engine using 
+app.set('view engine', '<engine-name>')
+
+-> To tell express js where our views can be found using 
+app.set('views', '<folder-name>')
+
+Note : By default this view setting will be : 
+app.set('views', 'views')
+
 
 1. PUG 
 -> Will create new files with extension PUG
