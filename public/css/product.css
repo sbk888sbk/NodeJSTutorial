@@ -4,11 +4,13 @@
     margin:auto ;
 }
 .form-control label,
-.form-control input{
+.form-control input,
+.form-control textarea{
     display: block;
     width: 100%;
 }
-.form-control input{
+.form-control input,
+.form-control textarea{
     border: 2px solid rgb(255, 47, 47);
     font: inherit;
     border-radius: 4px;
