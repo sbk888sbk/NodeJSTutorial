@@ -14,12 +14,11 @@
                         </header>
                         <div class="card__image">
                             <img
-                                src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                                src="<%= product.imageURL %>" alt="<%= product.title%>">
                         </div>
                         <div class="card__content">
-                            <h2 class="product__price">$19.99</h2>
-                            <p class="product__description">A very interesting book about so many even more interesting things!
-                            </p>
+                            <h2 class="product__price">$1<%= product.price %></h2>
+                            <p class="product__description"><%= product.description %></p>
                         </div>
                         <div class="card__actions">
                             <button class="btn">Add to Cart</button>
