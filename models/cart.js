@@ -1,39 +1,45 @@
 const fs = require('fs');
 const path = require('path');
-const p = path.join(path.dirname(process.mainModule.filename),
-'data',
-'cart.json');
+const p = path.join(path.dirname(process.mainModule.filename),'data','cart.json');
 
 module.exports = class Cart{
-    static addProduct(id, productPrice){
+    static addProduct(prodid, productPrice){
+        console.log(prodid)
         //fetch the previous cart
         fs.readFile(p,(err, fileContent) => {
+            let cart;
             if(err){
+                console.log("create new ")
                 //cart has to be created
-                let cart = {products: [], totalPrice: 0 };
+                cart = {products: [], totalPrice: 0 };
+            }
                 if(!err){
                     cart = JSON.parse(fileContent);
                 }
                 //Analyze the cart => Find existing product
-                const existingProductIndex = cart.products.findIndex(products => prod.id === id);
+                const existingProductIndex = cart.products.findIndex(products => products.id === prodid);
                 const existingProduct = cart.products[existingProductIndex];
+                
                 let updatedProduct;
                 //Add new product/ increase quanity
                 if(existingProduct){
                     updatedProduct = {...existingProduct };
+                    console.log(updatedProduct)
                     updatedProduct.qty = updatedProduct.qty + 1;
+                    console.log(updatedProduct)
                     cart.products = [...cart.products];
                     cart.products[existingProductIndex] = updatedProduct;
                 } else {
-                    updatedProduct = {id: id, qty:1};
+                    updatedProduct = {id:prodid, qty:1};
+                    cart.products = [...cart.products, updatedProduct];
                 }
-                cart.totalPrice = cart.totalPrice + productPrice;
-                cart.products = [...cart.products, updatedProduct];
+                cart.totalPrice = Number(cart.totalPrice) + Number(productPrice);
+                
                 fs.writeFile(p, JSON.stringify(cart), err =>{
                     console.log(err);
                 });
             }
-        });
+        );
 
     }
 }
