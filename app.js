@@ -1,5 +1,7 @@
 const express  = require('express');
 
+const PORT = process.env.PORT || 3000;
+
 const bodyParser = require('body-parser');
 //required when using handlebars
 //const expressHbs = require('express-handlebars');
@@ -43,4 +45,4 @@ app.use('/',shopRoutes);
 
 app.use(errorController.get404);
 
-app.listen(3000);
+app.listen(PORT);
